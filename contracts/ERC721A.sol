@@ -7,8 +7,10 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
+    // using IERC20 for IERC20;
     using Address for address; 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -17,6 +19,7 @@ contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
     uint256 private maxSupply = 5000;
     uint256 private mintLimit = 5;
     bool private isMintEnabled = true;
+    address private _nativeTokenAddress;
     string private baseTokenUri="ipfs:///";
     bool private revealed = false;
     string private unRevealUrl= "https://images1.mypinata.cloud/ipfs/QmWCZdZj4wyQK54GrepKPkdcWKerevdg3mmoUMh9yTBmiV/notRevealed.json";
@@ -26,18 +29,23 @@ contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
     address private beneficiaryOne;
     address private beneficiaryTwo;
     address private beneficiaryThree;
+    mapping(uint256 => address) public userNfts;
+    mapping(uint256 => uint256) public NFTsTimestamp;
+
 
     constructor(
         address beneficiaryOne_,
         address beneficiaryTwo_,
-        address beneficiaryThree_
+        address beneficiaryThree_,
+        address tokenAddress
     ) ERC721A (
         "LilMutantApeClub",
          "LMAC"
     ) {
         beneficiaryOne = beneficiaryOne_; 
         beneficiaryTwo = beneficiaryTwo_;
-        beneficiaryThree = beneficiaryThree_;    
+        beneficiaryThree = beneficiaryThree_; 
+        _nativeTokenAddress = tokenAddress;
     } 
 
     function setbaseTokenUri(string calldata baseTokenUri_) external onlyOwner {
@@ -147,14 +155,22 @@ contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
             "mint is off."
         );
         require(
-            msg.value >= mintPrice * quantity,
+            address(msg.sender).balance >= mintPrice * quantity,
             "Ether value sent is incorrect."
         );
-
         for (uint256 i = 0; i < quantity; i++) {
             _tokenIds.increment();
             uint256 newItemId = _tokenIds.current();
-            _safeMint(msg.sender, quantity);
+            _safeMint(msg.sender, 1);
+            userNfts[newItemId] = address(msg.sender);
+            NFTsTimestamp[newItemId] = block.timestamp;
+        }
+    }
+
+    function claim() public {
+        uint256 totalReward;
+        for (uint256 i = 0; i < balanceOf(msg.sender); i++) {
+            // userInfo[msg.sender][]
         }
     }
 
