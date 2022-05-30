@@ -29,9 +29,13 @@ contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
     address private beneficiaryOne;
     address private beneficiaryTwo;
     address private beneficiaryThree;
-    mapping(uint256 => address) public userNfts;
+    mapping(address => tokenData) public userNfts;
     mapping(uint256 => uint256) public NFTsTimestamp;
 
+    struct tokenData {
+        uint256 name;
+        uint256[] tokenIds;
+    }
 
     constructor(
         address beneficiaryOne_,
@@ -162,7 +166,7 @@ contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
             _tokenIds.increment();
             uint256 newItemId = _tokenIds.current();
             _safeMint(msg.sender, 1);
-            userNfts[newItemId] = address(msg.sender);
+            // userNfts[newItemId] = address(msg.sender);
             NFTsTimestamp[newItemId] = block.timestamp;
         }
     }
@@ -170,7 +174,7 @@ contract LilMutantApeClub is ERC721A, Ownable, ReentrancyGuard {
     function claim() public {
         uint256 totalReward;
         for (uint256 i = 0; i < balanceOf(msg.sender); i++) {
-            // userInfo[msg.sender][]
+            
         }
     }
 
