@@ -1,0 +1,725 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100;200;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Noto+Sans+Georgian:wght@100;200;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&family=Ubuntu:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Noto+Sans+Georgian:wght@100;200;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Noto+Sans+Georgian:wght@100;200;300;400;500;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Noto+Sans+Georgian:wght@100;200;300;400;500;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@700&display=swap");
+
+@font-face {
+  font-family: "sleepingregular";
+  src: url("./fonts/sleeping-webfont.woff2") format("woff2"),
+    url("./fonts/sleeping-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "chooseteamfont";
+  src: url("./fonts/chooseTeamFont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "din-next-light";
+  src: url("./fonts/din-next/DINNextW1G-Light.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "din-next-regular";
+  src: url("./fonts/din-next/DINNextW1G-Regular.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "din-next-bold";
+  src: url("./fonts/din-next/DINNextW1G-Bold.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "din-next-heavy";
+  src: url("./fonts/din-next/DINNextW1G-Bold.otf") format("woff2");
+}
+
+.text-chooseteamfont {
+  font-family: "chooseteamfont" !important;
+}
+
+.text-dinnextlight {
+  font-family: "din-next-light" !important;
+}
+
+.text-dinnextregular {
+  font-family: "din-next-regular" !important;
+}
+
+.text-dinnextbold {
+  font-family: "din-next-bold" !important;
+}
+
+.text-dinnextheavy {
+  font-family: "din-next-heavy" !important;
+}
+
+.text-anton {
+  font-family: "Anton", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  scroll-behavior: smooth !important;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.roadMapPara {
+  text-align: left;
+  margin-top: 20px;
+  font-family: "Courier New", monospace;
+  /* font-weight: bold; */
+  text-align: justify;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.bannerOne {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  position: relative !important;
+  background-image: url("./images/hills.jpeg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.bannerTwo {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  position: relative !important;
+  background-image: url("./images/rumbleBg.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+  padding-bottom: 14rem;
+  background-position: center center;
+}
+
+.navLinks {
+  background-color: #000;
+  margin: 40px 0;
+  margin-top: 20px;
+  padding: 16px 40px;
+  position: relative;
+  border-radius: 8px;
+  width: fit-content;
+  z-index: 1;
+}
+
+.connetBtn {
+  font-family: "Space Mono", monospace !important;
+  height: auto;
+  padding: 4px 10px;
+  align-self: center;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 0;
+  letter-spacing: 1px;
+  background-color: #fff;
+  color: #000;
+
+}
+
+.phase {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin: 13px 0;
+}
+
+.colorWhite {
+  color: #ffff;
+  font-size: 18px;
+}
+
+.mintBtn {
+  z-index: 100;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  padding: 4px 0;
+  border: 0;
+  width: 180px;
+  -ms-grid-row-align: center;
+  align-self: center;
+  font-weight: bold;
+  background-color: rgb(42, 42, 42);
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.navLinks a {
+  padding: 2px 14px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 4px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.currency,
+.currencyOne {
+  font-family: "sleepingregular";
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 75px;
+  letter-spacing: -1px;
+  margin-top: 10%;
+  /* font-size: 120px; */
+  color: #fff;
+  text-shadow: rgb(0 0 0 / 50%) -1px -1px 0px, rgb(0 0 0 / 50%) -1px 1px 0px,
+    rgb(0 0 0 / 50%) 1px 1px 0px, rgb(0 0 0 / 50%) 1px -1px 0px;
+}
+
+.small {
+  font-size: 95px;
+}
+
+.team {
+  margin-top: 50px;
+  font-family: "Courier New", monospace;
+  font-size: 70px;
+  margin-bottom: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 80%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.currencyFaq {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.rarityCard {
+  background-color: #fff;
+  padding: 20px;
+  border: 8px solid #1f2024;
+  border-radius: 24px;
+  box-shadow: -11px 11px 0 -4px #1f2024;
+}
+
+.rarityCurrency {
+  color: #01579b;
+  margin: 10px;
+  font-size: 60px;
+  text-shadow: 2px 2px #000;
+}
+
+.heading3 {
+  font-weight: bold;
+}
+
+.cardHeading {
+  font-family: "Anton", sans-serif;
+  margin-bottom: 0;
+  text-align: left;
+
+  font-size: 21px;
+  color: #000;
+  /* margin-top: 2%; */
+  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+    rgb(140 140 140 / 50%) 0px 4px 0px, #787878 0px 0px 0px,
+    rgb(0 0 0 / 50%) 0px 5px 10px;
+}
+
+.customCard {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  min-height: 500px;
+  position: relative;
+  padding: 20px 35px;
+  width: 60%;
+  box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+  -webkit-box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+  -moz-box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+}
+
+.customCard1 {
+
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  position: relative;
+  padding: 20px 35px;
+  width: 60%;
+  box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+  -webkit-box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+  -moz-box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+}
+
+.msgPara {
+  overflow-x: scroll;
+}
+
+.bottomCard {
+  padding: 40px;
+  background-image: linear-gradient(90deg,
+      rgba(255, 255, 255, 01),
+      rgba(255, 255, 255, 1));
+  border: 1px solid #000;
+  box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+  -webkit-box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+  -moz-box-shadow: 6px 4px 0px 3px rgb(128, 128, 128) !important;
+}
+
+.col-md-12 {
+  padding: 0;
+}
+
+.Container ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Container ul:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 100%;
+  border: 1px dashed #aaa;
+}
+
+.box {
+  margin: 50px 0;
+  padding: 10px 20px;
+  background: #ffa928;
+  width: 100%;
+  position: relative;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 2px dashed #000;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px rgba(100, 100, 100, 0.3);
+}
+
+.box>span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+
+.box>span:before,
+.box>span:after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ccc;
+  background: #01579b;
+  border-radius: 100%;
+}
+
+.box>span:before {
+  top: -12px;
+}
+
+.box>span:after {
+  top: 100%;
+}
+
+.box .title {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #01579b;
+  margin-top: 10px;
+}
+
+.box .sub-title {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.box .info {
+  margin: 15px 0;
+}
+
+.box .time span {
+  position: absolute;
+  font-size: 0.5rem;
+  color: #aaa;
+}
+
+.box .time span:first-child {
+  top: -10px;
+  left: -70px;
+}
+
+.box .time span:last-child {
+  top: 100%;
+  left: -70px;
+}
+
+.newBanner {
+  /* margin-top: 55px; */
+  position: relative;
+}
+
+.newBanner img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  margin-top: 70px;
+  width: 610px !important;
+}
+
+.width100 {
+  width: 100% !important;
+}
+
+.para {
+  font-family: "Courier New", monospace !important;
+  text-align: justify;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
+.para1 {
+  font-family: "Courier New", monospace !important;
+  text-align: justify;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.gap {
+  position: relative;
+  margin: 5px 0;
+}
+
+.gapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3));
+}
+
+.gapImg {
+  width: 100%;
+}
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1100px) {
+
+  .customCard,
+  .customCard1 {
+    width: 80%;
+  }
+}
+
+
+@media all and (min-width: 2000px) {
+  .logo {
+    width: 830px;
+  }
+}
+
+@media all and (max-width: 992px) {
+
+  .logo {
+    width: 230px !important;
+  }
+}
+
+
+@media all and (max-width: 768px) {
+
+  .MainHeader__container {
+    max-width: 450px !important;
+  }
+
+  .choose-your-team-text {
+    font-size: 143px;
+  }
+
+  .bottomCard {
+    padding: 20px;
+    margin-top: 64px;
+  }
+
+  .customCard,
+  .customCard1 {
+    min-height: auto;
+    width: 95%;
+  }
+
+  .imageFive {
+    width: 100px;
+    top: 20%;
+    left: 10%;
+  }
+
+  .imageSix {
+    width: 100px;
+    top: 60%;
+    left: 10%;
+  }
+
+  .imageSeven {
+    width: 100px;
+    top: 40%;
+    left: 10%;
+  }
+
+  .imageEight {
+    display: none;
+  }
+
+  .heroLeftImg,
+  .heroRightImg {
+    display: none;
+  }
+
+  .mintBtn {
+    padding: 14px 0;
+    width: 250px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .cardHeading {
+
+    font-weight: normal;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .bold {
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold !important;
+  }
+
+  .customCard,
+  .customCard1 {
+    padding: 8px;
+  }
+
+  .currency {
+    font-size: 44px !important;
+  }
+
+  .bannerTwo {
+    padding-top: 5px;
+  }
+
+  .logo {
+    width: 300px !important;
+    margin-top: unset;
+
+  }
+}
+
+@media all and (max-width: 576px) {
+  .socialIcons {
+    /* display: none !important; */
+    margin: 0 !important;
+  }
+
+  .mintBtn {
+    width: 200px !important;
+  }
+
+  .currencyOne {
+    font-size: 22px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .marginTop {
+    margin-top: -15px !important;
+    font-size: 50px !important;
+  }
+
+  .para1 {
+    text-align: center !important;
+  }
+
+  .bannerOne {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .customCard,
+  .customCard1 {
+    padding: 15px 30px !important;
+  }
+
+  .MainHeader {
+    position: unset !important;
+
+  }
+
+  .connetBtn {
+    font-weight: normal;
+    padding: 3px;
+    letter-spacing: normal;
+  }
+
+  .socialIcons {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bannerOne {
+    min-height: 30vh;
+  }
+
+  .banner {
+    min-height: 33vh;
+  }
+
+  .navLinks a {
+    font-size: 20px !important;
+  }
+
+  .box {
+    width: auto !important;
+  }
+
+  .navLinks {
+    padding: 16px 20px;
+  }
+
+  .navLinks a {
+    padding: 2px 8px;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 210px !important;
+  }
+}
+
+
+@media all and (max-width: 411px) {
+
+  .MainHeader {
+    padding-left: 0.2rem;
+  }
+
+  .connetBtn {
+    font-size: 13px;
+  }
+
+  .gap-3 {
+    gap: 0.2rem !important;
+  }
+
+  .logo {
+    width: 250px !important;
+    margin-top: unset;
+    /* margin-bottom: 30px; */
+  }
+
+  .connetBtn {
+    text-transform: capitalize !important;
+  }
+
+  .headerNavLink {
+    font-size: 10px !important;
+  }
+
+  .socialIcons {
+    font-size: 12px !important;
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 2px;
+  }
+
+}
+
+@media all and (max-width: 375px) {
+  .mintBtn {
+    width: 180px !important;
+  }
+
+  .logo {
+    width: 130px !important;
+  }
+
+
+}
+
+
+
+@media all and (max-width: 280px) {
+
+  .customCard,
+  .customCard1 {
+    padding: 4px !important;
+  }
+
+
+}
